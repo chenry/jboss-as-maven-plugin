@@ -112,7 +112,7 @@ public abstract class AbstractServerConnection extends AbstractMojo implements
      * @required
      * </pre>
      */
-    @Component(hint = "default")
+    @Component(hint = "mng-4384")
     private SecDispatcher secDispatcher;
 
     private ModelControllerClient client;
