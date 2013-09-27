@@ -259,8 +259,6 @@ public abstract class AbstractServerConnection extends AbstractMojo implements
 	    password = settingsPassword;
 	}
 
-	getLog().error("Password is: " + password);
-
 	return password;
     }
 
