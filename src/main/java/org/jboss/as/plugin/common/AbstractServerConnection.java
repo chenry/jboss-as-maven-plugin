@@ -229,7 +229,7 @@ public abstract class AbstractServerConnection extends AbstractMojo implements
 	    if (server != null) {
 		getLog().debug(DEBUG_MESSAGE_SETTINGS_HAS_ID);
 		password = getPassword(server);
-		username = server.getPassword();
+		username = server.getUsername();
 
 		if (username != null && password != null) {
 		    getLog().debug(DEBUG_MESSAGE_SETTINGS_HAS_CREDS);
