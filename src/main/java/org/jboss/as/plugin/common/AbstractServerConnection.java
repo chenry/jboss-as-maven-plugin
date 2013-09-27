@@ -30,6 +30,7 @@ import java.net.UnknownHostException;
 import javax.security.auth.callback.CallbackHandler;
 
 import org.apache.maven.plugin.AbstractMojo;
+import org.apache.maven.plugins.annotations.Component;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.settings.Server;
 import org.apache.maven.settings.Settings;
@@ -109,9 +110,9 @@ public abstract class AbstractServerConnection extends AbstractMojo implements
     /**
      * <pre>
      * @required
-     * @component role="org.sonatype.plexus.components.sec.dispatcher.SecDispatcher" role-hint="mng-4384"
      * </pre>
      */
+    @Component(hint = "default")
     private SecDispatcher secDispatcher;
 
     private ModelControllerClient client;
