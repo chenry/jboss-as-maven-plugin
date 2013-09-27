@@ -250,7 +250,7 @@ public abstract class AbstractServerConnection extends AbstractMojo implements
 
 	if (settingsPassword != null && settingsPassword.startsWith("{")) {
 	    try {
-		secDispatcher.decrypt(settingsPassword);
+		password = secDispatcher.decrypt(settingsPassword);
 	    } catch (SecDispatcherException e) {
 		getLog().warn(e.getMessage());
 		password = settingsPassword;
